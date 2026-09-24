@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BRICK conecta empresas con soluciones de suministro confiables, ágiles y a la medida.">
+  <title>BRICK | Comercializadora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="BRICK, inicio">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>BRICK</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#proposito">Propósito</a>
+      <a href="#contacto" class="nav-cta">Hablemos <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Comercializadora generalista</p>
+        <h1 id="hero-title">Todo lo que tu negocio necesita, <em>en un solo lugar.</em></h1>
+        <p class="hero-text">Conectamos necesidades con soluciones. Gestionamos el suministro de productos para que tu empresa avance sin interrupciones.</p>
+        <div class="hero-actions">
+          <a href="#contacto" class="button button-primary">Solicitar información <span aria-hidden="true">↗</span></a>
+          <a href="#nosotros" class="text-link">Conócenos <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-brand reveal">
+        <div class="logo-frame">
+          <img src="logo-brick.jpeg" alt="BRICK Comercializadora">
+        </div>
+        <span class="brand-coordinate">COMERCIALIZACIÓN · ABASTECIMIENTO · SOLUCIONES</span>
+      </div>
+      <div class="hero-foot">
+        <span>01 / PRESENTACIÓN</span>
+        <span class="scroll-indicator">DESLIZA <i></i></span>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Nuestros principios">
+      <div class="marquee-track">
+        <span>AGILIDAD <i>✦</i> CONFIANZA <i>✦</i> ALCANCE <i>✦</i> SOLUCIONES <i>✦</i></span>
+        <span aria-hidden="true">AGILIDAD <i>✦</i> CONFIANZA <i>✦</i> ALCANCE <i>✦</i> SOLUCIONES <i>✦</i></span>
+      </div>
+    </section>
+
+    <section class="about section" id="nosotros">
+      <div class="section-tag reveal"><span>02</span> QUIÉNES SOMOS</div>
+      <div class="about-grid">
+        <h2 class="reveal">Hacemos que comprar para tu empresa sea <em>más simple.</em></h2>
+        <div class="about-body reveal">
+          <p class="lead">Somos una comercializadora generalista que entiende que cada operación tiene necesidades distintas.</p>
+          <p>Localizamos, gestionamos y suministramos una amplia variedad de productos con atención cercana y procesos eficientes. Nos convertimos en un aliado que escucha, resuelve y acompaña a cada cliente desde la solicitud hasta la entrega.</p>
+          <div class="stats">
+            <div><strong data-count="360">0</strong><span>Visión integral</span></div>
+            <div><strong data-count="1">0</strong><span>Solo aliado</span></div>
+            <div><strong>∞</strong><span>Posibilidades</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="purpose section" id="proposito">
+      <div class="section-tag light reveal"><span>03</span> NUESTRO NORTE</div>
+      <div class="purpose-intro reveal">
+        <p>UNA DIRECCIÓN CLARA</p>
+        <h2>Crecer contigo, resolver contigo.</h2>
+      </div>
+      <div class="purpose-cards">
+        <article class="purpose-card reveal">
+          <div class="card-index">01</div>
+          <div class="card-icon mission-icon" aria-hidden="true"><span></span></div>
+          <div>
+            <h3>Misión</h3>
+            <p>Facilitar el abastecimiento de nuestros clientes mediante soluciones comerciales ágiles, confiables y personalizadas, construyendo relaciones duraderas basadas en el cumplimiento y la atención.</p>
+          </div>
+          <span class="card-word">ACCIÓN</span>
+        </article>
+        <article class="purpose-card accent reveal">
+          <div class="card-index">02</div>
+          <div class="card-icon vision-icon" aria-hidden="true"><span></span></div>
+          <div>
+            <h3>Visión</h3>
+            <p>Ser la comercializadora de referencia para empresas que buscan un socio estratégico capaz de resolver necesidades diversas con innovación, alcance y excelencia operativa.</p>
+          </div>
+          <span class="card-word">FUTURO</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact section" id="contacto">
+      <div class="contact-copy reveal">
+        <div class="section-tag"><span>04</span> CONTACTO</div>
+        <h2>Cuéntanos qué necesitas.</h2>
+        <p>Tu próximo suministro comienza con una conversación. Déjanos tus datos y nos pondremos en contacto contigo.</p>
+        <div class="contact-note"><span>↗</span> Respuesta clara.<br>Atención personal.</div>
+      </div>
+      <form class="contact-form reveal" id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="¿Cómo te llamas?" required>
+          <small>Por favor, escribe tu nombre.</small>
+        </div>
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="nombre@empresa.com" required>
+          <small>Ingresa un correo válido.</small>
+        </div>
+        <div class="field">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="4" placeholder="Cuéntanos qué producto o solución estás buscando..." required></textarea>
+          <small>Cuéntanos brevemente qué necesitas.</small>
+        </div>
+        <button class="button button-submit" type="submit">Enviar solicitud <span aria-hidden="true">↗</span></button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#top"><img src="logo-brick.jpeg" alt="BRICK Comercializadora"><span>BRICK</span></a>
+    <p>Soluciones que construyen negocios.</p>
+    <a href="#top" class="back-top">VOLVER ARRIBA ↑</a>
+    <small>© <span id="year"></span> BRICK. Todos los derechos reservados.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -45,20 +45,47 @@ document.querySelectorAll('[data-count]').forEach(element => countObserver.obser
 
 const form = document.querySelector('#contact-form');
 const status = form.querySelector('.form-status');
+
 form.addEventListener('submit', event => {
   event.preventDefault();
   status.textContent = '';
   let valid = true;
+
   form.querySelectorAll('[required]').forEach(field => {
-    const fieldValid = field.type === 'email' ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim()) : field.value.trim().length > 0;
+    const fieldValid = field.type === 'email'
+      ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim())
+      : field.value.trim().length > 0;
     field.closest('.field').classList.toggle('invalid', !fieldValid);
     valid = valid && fieldValid;
   });
+
   if (!valid) return;
-  const name = form.elements.name.value.trim().split(' ')[0];
-  status.textContent = `Gracias, ${name}. Tu solicitud está lista; conectaremos el envío cuando definas el correo receptor.`;
-  form.reset();
+
+  const datos = new FormData(form);
+  fetch(form.action, {
+    method: 'POST',
+    body: datos,
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(response => {
+    if (response.ok) {
+      const name = form.elements.name.value.trim().split(' ')[0];
+      status.textContent = `¡Gracias, ${name}! Tu solicitud ha sido enviada. Te contactaremos pronto.`;
+      status.style.color = '#397500';
+      form.reset();
+    } else {
+      status.textContent = 'Hubo un error al enviar. Por favor, inténtalo de nuevo.';
+      status.style.color = '#b62e12';
+    }
+  })
+  .catch(error => {
+    status.textContent = 'Error de conexión. Por favor, inténtalo más tarde.';
+    status.style.color = '#b62e12';
+  });
 });
 
-form.querySelectorAll('input, textarea').forEach(field => field.addEventListener('input', () => field.closest('.field').classList.remove('invalid')));
+form.querySelectorAll('input, textarea').forEach(field =>
+  field.addEventListener('input', () => field.closest('.field').classList.remove('invalid'))
+);
+
 document.querySelector('#year').textContent = new Date().getFullYear();
